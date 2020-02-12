@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should be an instance of Form 1`] = `
+<form
+  className="user-form"
+>
+  <input
+    className="form-input"
+    name="name"
+    onChange={[Function]}
+    placeholder="Name"
+    type="text"
+    value=""
+  />
+  <input
+    className="form-input"
+    name="date"
+    onChange={[Function]}
+    placeholder="Date (mm/dd)"
+    type="text"
+    value=""
+  />
+  <input
+    className="form-input"
+    name="time"
+    onChange={[Function]}
+    placeholder="Time"
+    type="text"
+    value=""
+  />
+  <input
+    className="form-input"
+    name="number"
+    onChange={[Function]}
+    placeholder="Number of Guests"
+    type="text"
+    value=""
+  />
+  <button
+    className="submit-btn"
+    onClick={[Function]}
+    type="button"
+  >
+    Make Resservation
+  </button>
+</form>
+`;
