@@ -7,15 +7,17 @@
 
 .form-input {
   width: 200px;
-  font-size: 16px;
+  font-size: 18px;
   margin: 10px;
+  margin-right: 30px;
 }
 
 .submit-btn {
   background-color: #028080;
   font-size: 16px;
   color: #FFF;
-  height: 26px;
+  height: 28px;
   margin-top: 8px;
-  width: 180px;
+  width: 200px;
+  margin-bottom: 10px;
 }
