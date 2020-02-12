@@ -23,4 +23,9 @@ describe('Form', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('should update state when addReservation is invoked', () => {
+    wrapper.find('button').simulate('click');
+    expect(mockAddReservation).toHaveBeenCalled();
+  })
+
 })
