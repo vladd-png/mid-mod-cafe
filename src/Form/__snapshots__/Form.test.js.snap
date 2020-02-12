@@ -10,6 +10,7 @@ exports[`Form should be an instance of Form 1`] = `
     name="name"
     onChange={[Function]}
     placeholder="Name"
+    required={true}
     type="text"
     value=""
   />
@@ -18,6 +19,7 @@ exports[`Form should be an instance of Form 1`] = `
     name="date"
     onChange={[Function]}
     placeholder="Date (mm/dd)"
+    required={true}
     type="text"
     value=""
   />
@@ -26,6 +28,7 @@ exports[`Form should be an instance of Form 1`] = `
     name="time"
     onChange={[Function]}
     placeholder="Time"
+    required={true}
     type="text"
     value=""
   />
@@ -34,6 +37,7 @@ exports[`Form should be an instance of Form 1`] = `
     name="number"
     onChange={[Function]}
     placeholder="Number of Guests"
+    required={true}
     type="text"
     value=""
   />

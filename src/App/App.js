@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form.js';
 import ReservationContainer from '../ReservationContainer/ReservationContainer.js';
+import { getReservations, addReservation, removeReservation } from '../apiCalls.js'
 
 
 class App extends Component {
@@ -12,34 +13,26 @@ class App extends Component {
     }
   }
   componentDidMount = () => {
-    fetch('http://localhost:3001/api/v1/reservations')
-      .then(response => response.json())
+    getReservations()
       .then(reservations =>  this.setState({ reservations }))
       .catch(error => console.log(error.message))
   }
   addReservation = reservation => {
-    let options = {
-      method: 'POST',
-      body: JSON.stringify({ ...reservation, id: Date.now() }),
-      headers: {
-        'Content-type': 'application/json'
-      }
-    }
-    fetch('http://localhost:3001/api/v1/reservations', options)
-      .then(response => response.json())
+    addReservation(reservation)
       .then(data => this.setState({ reservations: [...this.state.reservations, data] }))
   }
   cancelReservation = id => {
     let filteredReso = this.state.reservations.filter(reso => reso.id !== id)
     this.setState({ reservations: filteredReso })
-    let options = {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }
-    fetch(`http://localhost:3001/api/v1/reservations/${id}`, options)
+    removeReservation(id)
       .then(response => console.log(response))
+  }
+  sortReservation = props => {
+    if (props === 'first') {
+      let sorted = this.state.reservations.sort((a, b) => parseInt(b.date) - parseInt(a.date))
+    } else if (props === 'last') {
+      let sorted = this.state.reservations.sort((a, b) => parseInt(a.date) - parseInt(b.date))
+    }
   }
   render() {
     return (
@@ -49,7 +42,7 @@ class App extends Component {
           <Form addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
-          <ReservationContainer reservations={this.state.reservations} cancelReservation={this.cancelReservation}/>
+          <ReservationContainer reservations={this.state.reservations} cancelReservation={this.cancelReservation} sortReservation={this.sortReservation}/>
         </div>
       </div>
     )

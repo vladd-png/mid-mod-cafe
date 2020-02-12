@@ -21,10 +21,10 @@ class Form extends Component {
   render() {
     return(
       <form className='user-form'>
-        <input id='test-input' className='form-input' type='text' placeholder='Name' value={this.state.name} onChange={this.handleChange} name='name' />
-        <input className='form-input' type='text' placeholder='Date (mm/dd)' value={this.state.date} onChange={this.handleChange} name='date' />
-        <input className='form-input' type='text' placeholder='Time' value={this.state.time} onChange={this.handleChange} name='time' />
-        <input className='form-input' type='text' placeholder='Number of Guests' value={this.state.number} onChange={this.handleChange} name='number' />
+        <input id='test-input' className='form-input' type='text' placeholder='Name' value={this.state.name} onChange={this.handleChange} name='name' required/>
+        <input className='form-input' type='text' placeholder='Date (mm/dd)' value={this.state.date} onChange={this.handleChange} name='date' required/>
+        <input className='form-input' type='text' placeholder='Time' value={this.state.time} onChange={this.handleChange} name='time' required/>
+        <input className='form-input' type='text' placeholder='Number of Guests' value={this.state.number} onChange={this.handleChange} name='number' required/>
         <button className='submit-btn' type='button' onClick={this.addReservation}>Make Resservation</button>
       </form>
     )
