@@ -11,7 +11,7 @@ class Form extends Component {
       number: ''
     }
   }
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value })
   }
   addReservation = props => {
@@ -21,7 +21,7 @@ class Form extends Component {
   render() {
     return(
       <form className='user-form'>
-        <input className='form-input' type='text' placeholder='Name' value={this.state.name} onChange={this.handleChange} name='name' />
+        <input id='test-input' className='form-input' type='text' placeholder='Name' value={this.state.name} onChange={this.handleChange} name='name' />
         <input className='form-input' type='text' placeholder='Date (mm/dd)' value={this.state.date} onChange={this.handleChange} name='date' />
         <input className='form-input' type='text' placeholder='Time' value={this.state.time} onChange={this.handleChange} name='time' />
         <input className='form-input' type='text' placeholder='Number of Guests' value={this.state.number} onChange={this.handleChange} name='number' />
