@@ -32,6 +32,14 @@ class App extends Component {
   cancelReservation = id => {
     let filteredReso = this.state.reservations.filter(reso => reso.id !== id)
     this.setState({ reservations: filteredReso })
+    let options = {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    fetch(`http://localhost:3001/api/v1/reservations/${id}`, options)
+      .then(response => console.log(response))
   }
   render() {
     return (
