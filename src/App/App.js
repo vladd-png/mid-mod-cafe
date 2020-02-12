@@ -30,10 +30,8 @@ class App extends Component {
   sortReservation = props => {
     if (props === 'first') {
       let sorted = this.state.reservations.sort((a, b) => parseInt(b.date) - parseInt(a.date))
-      console.log(sorted);
     } else if (props === 'last') {
       let sorted = this.state.reservations.sort((a, b) => parseInt(a.date) - parseInt(b.date))
-      console.log(sorted);
     }
   }
   render() {
