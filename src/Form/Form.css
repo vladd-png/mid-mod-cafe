@@ -1,0 +1,21 @@
+.user-form {
+  /* height: 100px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.form-input {
+  width: 200px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.submit-btn {
+  background-color: #028080;
+  font-size: 16px;
+  color: #FFF;
+  height: 26px;
+  margin-top: 8px;
+  width: 180px;
+}
