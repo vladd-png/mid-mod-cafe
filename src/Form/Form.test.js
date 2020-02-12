@@ -31,11 +31,14 @@ describe('Form', () => {
   it('should update state when handleChange is invoked', () => {
     let mockEvent = {target: {name: 'name', value: 'Ranger' } }
     let expected = 'Ranger'
-    // wrapper.find('#test-input').simulate('change');
-    // expect(wrapper.handleChange()).toHaveBeenCalled();
     wrapper.instance().handleChange(mockEvent);
     expect(wrapper.state('name')).toEqual(expected);
-
   })
 
+  it('should reset its inputs after addReservation is invoked', () => {
+    let defaultState = {target: {name: 'name', value: 'Ranger' } }
+    let expected = {target: {name: '', value: '' } }
+    wrapper.instance().addReservation(defaultState)
+    expect(wrapper.state('name')).toEqual('')
+  })
 })
