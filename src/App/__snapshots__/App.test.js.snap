@@ -20,6 +20,7 @@ exports[`App should be an instance of App 1`] = `
     className="resy-container"
   >
     <ReservationContainer
+      cancelReservation={[Function]}
       reservations={Array []}
     />
   </div>
