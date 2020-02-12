@@ -28,4 +28,14 @@ describe('Form', () => {
     expect(mockAddReservation).toHaveBeenCalled();
   })
 
+  it('should update state when handleChange is invoked', () => {
+    let mockEvent = {target: {name: 'name', value: 'Ranger' } }
+    let expected = 'Ranger'
+    // wrapper.find('#test-input').simulate('change');
+    // expect(wrapper.handleChange()).toHaveBeenCalled();
+    wrapper.instance().handleChange(mockEvent);
+    expect(wrapper.state('name')).toEqual(expected);
+
+  })
+
 })

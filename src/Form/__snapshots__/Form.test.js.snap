@@ -6,6 +6,7 @@ exports[`Form should be an instance of Form 1`] = `
 >
   <input
     className="form-input"
+    id="test-input"
     name="name"
     onChange={[Function]}
     placeholder="Name"
