@@ -11,6 +11,9 @@ class Form extends Component {
       number: null
     }
   }
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
   render() {
     return(
       <form className='user-form'>
