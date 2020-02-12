@@ -8,7 +8,7 @@ const ReservationCard = props => {
       <h2 className='card-details'>{props.date}</h2>
       <h2 className='card-details'>{props.time}</h2>
       <h2 className='card-details'>Number of Guests: {props.number}</h2>
-      <button className='submit-btn' type='text'>Cancel </button>
+      <button className='submit-btn' type='text' onClick={() => props.cancelReservation(props.id)}>Cancel </button>
     </article>
   )
 }
