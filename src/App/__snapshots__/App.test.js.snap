@@ -22,6 +22,7 @@ exports[`App should be an instance of App 1`] = `
     <ReservationContainer
       cancelReservation={[Function]}
       reservations={Array []}
+      sortReservation={[Function]}
     />
   </div>
 </div>
